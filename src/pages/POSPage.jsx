@@ -130,7 +130,7 @@ function POSPage() {
                   : "Sepette Ürün Bulunamadı"}
               </tbody>
             </table>
-            <h5 className="px-5 text-white" font-size="200px">Toplam Tutar: {totalAmount}TL</h5>
+            <h5 className="px-5 text-white" font-size="200px">Toplam Tutar: 432.75 {setTotalAmount}TL</h5>
           </div>
         </div>
       </div>
