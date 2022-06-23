@@ -1,0 +1,74 @@
+{
+    "products": [
+      {
+        "id": "0",
+        "name": "Ekmek 200g",
+        "price": "3.5",
+        "stock": 50,
+        "image": "https://reimg-carrefour.mncdn.com/mnresize/600/600/productimage/20000460/20000460_0_MC/8796295364658_1528879416083.jpg"
+      },
+      {
+        "id": "1",
+        "name": "Makarna",
+        "price": "7.90",
+        "stock": 16,
+        "image": "https://reimg-carrefour.mncdn.com/mnresize/600/600/productimage/30097165/30097165_0_MC/8796983722034_1623735768284.jpg"
+      },
+      {
+        "id": "2",
+        "name": "Baldo Pirinç 1Kg",
+        "price": "34.90",
+        "stock": 16,
+        "image": "https://reimg-carrefour.mncdn.com/mnresize/600/600/productimage/30059835/30059835_0_MC/8796675538994_1555072115624.jpg"
+      },
+      {
+        "id": "3",
+        "name": "Çay 1Kg",
+        "price": "74.90",
+        "stock": 16,
+        "image": "https://reimg-carrefour.mncdn.com/mnresize/600/600/productimage/30037044/30037044_0_MC/8796518907954_1499977087970.jpg"
+      },
+      {
+        "id": "4",
+        "name": "Süt 1L",
+        "price": "19.90",
+        "stock": 16,
+        "image": "https://reimg-carrefour.mncdn.com/mnresize/600/600/productimage/30008788/30008788_0_MC/8796373581874_1577437689110.jpg"
+      },
+      {
+        "id": "5",
+        "name": "Cips",
+        "price": "12.25",
+        "stock": 16,
+        "image": "https://reimg-carrefour.mncdn.com/mnresize/600/600/productimage/30078594/30078594_0_MC/8796816572466_1603204641283.jpg"
+      },
+      {
+        "id": "6",
+        "name": "Türk Kahvesi",
+        "price": "17.50",
+        "stock": 16,
+        "image": "https://reimg-carrefour.mncdn.com/mnresize/600/600/productimage/30000332/30000332_0_MC/8801435123762_1499975530822.jpg"
+      },
+      {
+        "id": "7",
+        "name": "Kola 1L",
+        "price": "10",
+        "stock": 16
+        
+      },
+      {
+        "id": "8",
+        "name": "Sıvı Yağ 1L",
+        "price": "45.25",
+        "stock": 16,
+        "image": "https://reimg-carrefour.mncdn.com/mnresize/600/600/productimage/30072273/30072273_0_MC/8796760801330_1646904681307.jpg"
+      },
+      {
+        "id": "9",
+        "name": "Yoğurt 2Kg",
+        "price": "49.95",
+        "stock": 16,
+        "image": "https://reimg-carrefour.mncdn.com/mnresize/600/600/productimage/30110473/30110473_0_MC/8806909771826_1564396145077.jpg"
+      }
+    ]
+  }
