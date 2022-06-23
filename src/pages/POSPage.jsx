@@ -7,7 +7,7 @@ function POSPage() {
   const [products, setProducts] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
   const [cart, setCart] = useState([]);
-  const [totalAmount, setTotalAmount] = useState(0);
+  const [totalAmount, setTotalAmount] = useState();
 
   const toastOptions = {
     autoClose: 400,
@@ -15,14 +15,13 @@ function POSPage() {
   };
 
   const fetchProducts = () => {
-    setIsLoading(true);
-   
+    setIsLoading(true);   
     setProducts(data.products);
     setIsLoading(false);
   };
 
-  const addProductToCart = async (product) => {
-    let findProductInCart = await cart.find((i) => {
+  const addProductToCart =  (product) => {
+    let findProductInCart = cart.find((i) => {
       return i.id === product.id;
     });
     if (findProductInCart) {
@@ -42,7 +41,7 @@ function POSPage() {
         }
       });
       setCart(newCart);
-      toast("Sepete TL{newItem.name} eklendi", toastOptions);
+      toast("Sepete eklendi", toastOptions);
     } else {
       let addingProduct = {
         ...product,
@@ -50,10 +49,10 @@ function POSPage() {
         totalAmount: product.price,
       };
       setCart([...cart, addingProduct]);
-      toast("Sepete TL{product.name} eklendi", toastOptions);
+      toast("Sepete eklendi", toastOptions);
     }
   };
-  const removeProduct = async (product) => {
+  const removeProduct =  (product) => {
     const newCart = cart.filter((cartItem) => cartItem.id !== product.id);
     setCart(newCart);
   };
@@ -71,7 +70,7 @@ function POSPage() {
 
   return (
     <MainLayout>
-      <div className="row" style={{display:"flex",flexDirection:"row"}}>
+      <div className="row" style={{display:"flex",flexDirection:"row", justifyContent:"space-between"}}>
         <div className="col-lg-8">
           {isLoading ? (
             "Loading"
@@ -83,7 +82,7 @@ function POSPage() {
                   <div key={key} className="col-lg-4">
                     <div
                       className="border"
-                      style={{display:"flex",flexDirection:"row",justifyContent:"space-evenly"}}
+                      style={{display:"flex",flexDirection:"row",justifyContent:"space-between"}}
                       onClick={() => addProductToCart(product)}
                     >
                       <p>{product.name}</p>
@@ -91,9 +90,9 @@ function POSPage() {
                         src={product.image}
                         className="img-fluid"
                         alt={product.name}
-                        style={{width:20,height:20,resize:"cover"}}
+                        style={{width:130,height:130,resize:"cover"}}
                       ></img>
-                      <p>TL{product.price}</p>
+                      <p>{product.price}TL</p>
                     </div>
                   </div>
                 );
@@ -103,8 +102,8 @@ function POSPage() {
         </div>
         <div className="col-lg-4">
           <div className="table-responsive bg-dark">
-            <table className="table table-responsive table-dark table-hover">
-              <thead>
+            <table className="table table-responsive table-light table-hover">
+              <thead >
                 <tr>
                   <td>#</td>
                   <td>Ürün</td>
@@ -120,8 +119,8 @@ function POSPage() {
                       <tr key={key}>
                         <td>{cartProduct.id}</td>
                         <td>{cartProduct.name}</td>
-                        <td>{cartProduct.price}</td>
                         <td>{cartProduct.quantity}</td>
+                        <td>{cartProduct.price}</td>
                         <td>{cartProduct.totalAmount}</td>
                         <td>
                           <button className="btn btn-danger btn-sm">Sil</button>
@@ -131,7 +130,7 @@ function POSPage() {
                   : "Sepette Ürün Bulunamadı"}
               </tbody>
             </table>
-            <h2 className="px-2 text-white">Toplam Tutar: TL</h2>
+            <h5 className="px-5 text-white" font-size="200px">Toplam Tutar: {totalAmount}TL</h5>
           </div>
         </div>
       </div>
